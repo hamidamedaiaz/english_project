@@ -190,7 +190,7 @@ function initCarDemo() {
 
   function drawCar(W, H) {
     const cw = W * 0.28, ch = cw * 0.4;
-    const cx = Math.min(carX, W * 0.55);
+    const cx = carX;
     const cy = H * 0.6 - ch - 2;
     ctx.save();
     // Body
@@ -274,9 +274,8 @@ function initCarDemo() {
     if (speedEl) speedEl.textContent = spd;
     if (rangeEl && running) { range = Math.max(0, range - 0.02); rangeEl.textContent = Math.round(range); }
     if (statusEl) statusEl.textContent = running ? (spd > 50 ? 'Running on water — 0g CO₂' : 'Warming up...') : 'Engine off';
-    // Particles
+    // Particles from chamber
     if (running && frame % 5 === 0) {
-      const p1 = document.getElementById('chamberParticleX');
       const bx = 154, by = (canvas.height * 0.08) + 50;
       particles.push(new Particle(bx, by, 'water'));
       if (frame % 10 === 0) {
@@ -328,7 +327,11 @@ function initCarDemo() {
     if (running) {
       carSpeed = Math.min(7.8, carSpeed + 0.04);
       carX += carSpeed;
-      if (carX > W * 0.58) carX = W * 0.58;
+      // Loop: when car exits right side, reset to left and re-enter
+      if (carX > W + W * 0.3) {
+        carX = -W * 0.3;
+        exhaust = [];
+      }
     } else {
       carSpeed = Math.max(0, carSpeed - 0.08);
     }
