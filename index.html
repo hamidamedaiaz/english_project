@@ -3,107 +3,693 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Project WATERFLASH - Landing Page Mock</title>
+	<title>WATERFLASH™ — Hydrogen Propulsion Technology</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap"
-		rel="stylesheet"
-	/>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend:wght@300;600;800&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="index.css" />
 </head>
 <body>
-	<div class="background-orb orb-a"></div>
-	<div class="background-orb orb-b"></div>
+	<div class="grain-overlay"></div>
+	<div class="glow-orb glow-1"></div>
+	<div class="glow-orb glow-2"></div>
+	<div class="glow-orb glow-3"></div>
 
-	<header class="hero">
-		<div class="logo-slogan">
-			<div class="logo-box" aria-label="Project logo placeholder">
-				<span>LOGO</span>
+	<!-- ── NAVBAR ─────────────────────────────────────────────────────────── -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="logo-nav">
+				<svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M20 4L34 12V28L20 36L6 28V12L20 4Z" stroke="currentColor" stroke-width="2" fill="none"/>
+					<circle cx="20" cy="20" r="6" fill="currentColor" opacity="0.4"/>
+					<path d="M20 14V26M14 20H26" stroke="currentColor" stroke-width="2"/>
+				</svg>
+				<span class="logo-text">WATERFLASH</span>
 			</div>
-			<p class="slogan">"SLOGAN"</p>
+			<div class="nav-links">
+				<a href="#technology">Technology</a>
+				<a href="#demonstration">Demo</a>
+				<a href="#roadmap">Roadmap</a>
+				<a href="#team">Team</a>
+				<a href="#investors" class="nav-cta">For Investors</a>
+			</div>
+			<button class="hamburger" aria-label="Toggle menu">
+				<span></span><span></span><span></span>
+			</button>
 		</div>
+	</nav>
 
-		<h1>WATER FLASH</h1>
-		<p class="hero-subtitle">
-			DESCRIPTON
-		</p>
+	<!-- ── HERO ───────────────────────────────────────────────────────────── -->
+	<header class="hero-section" id="hero">
+		<div class="hero-container">
+			<div class="hero-badge">
+				<span class="badge-dot"></span>
+				Stealth Mode · Seeking Series A
+			</div>
+			<h1 class="hero-title">
+				The Hydrogen Revolution
+				<span class="title-highlight">Starts With Water</span>
+			</h1>
+			<p class="hero-description">
+				WATERFLASH™ technology transforms H₂O into propulsion energy through real-time electrolysis.
+				Zero emissions. Infinite range. The future of automotive propulsion is already here.
+			</p>
+
+			<!-- Animated molecule visual -->
+			<div class="hero-visual reveal">
+				<svg class="molecule-svg" viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="gCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+							<stop offset="0%" stop-color="#06b6d4"/>
+							<stop offset="100%" stop-color="#10b981"/>
+						</linearGradient>
+						<filter id="glow">
+							<feGaussianBlur stdDeviation="3" result="blur"/>
+							<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+						</filter>
+					</defs>
+					<!-- Water molecule (H2O) -->
+					<circle cx="80" cy="100" r="30" fill="url(#gCyan)" opacity="0.9" filter="url(#glow)"/>
+					<text x="80" y="106" text-anchor="middle" fill="#0a0e1a" font-size="14" font-weight="700" font-family="Lexend">H₂O</text>
+					<circle cx="140" cy="72" r="18" fill="#06b6d4" opacity="0.6"/>
+					<text x="140" y="77" text-anchor="middle" fill="#0a0e1a" font-size="11" font-weight="600" font-family="Lexend">H</text>
+					<circle cx="140" cy="128" r="18" fill="#06b6d4" opacity="0.6"/>
+					<text x="140" y="133" text-anchor="middle" fill="#0a0e1a" font-size="11" font-weight="600" font-family="Lexend">H</text>
+					<line x1="108" y1="86" x2="124" y2="78" stroke="#06b6d4" stroke-width="2" opacity="0.5"/>
+					<line x1="108" y1="114" x2="124" y2="122" stroke="#06b6d4" stroke-width="2" opacity="0.5"/>
+					<!-- Arrow -->
+					<g class="svg-arrow">
+						<line x1="175" y1="100" x2="230" y2="100" stroke="url(#gCyan)" stroke-width="2.5" stroke-dasharray="6 4"/>
+						<polygon points="230,94 242,100 230,106" fill="url(#gCyan)"/>
+						<text x="208" y="92" text-anchor="middle" fill="#06b6d4" font-size="10" font-family="DM Sans">⚡ Catalyst</text>
+					</g>
+					<!-- Hydrogen output -->
+					<circle cx="290" cy="78" r="24" fill="url(#gCyan)" opacity="0.85" filter="url(#glow)"/>
+					<text x="290" y="84" text-anchor="middle" fill="#0a0e1a" font-size="13" font-weight="700" font-family="Lexend">H₂</text>
+					<text x="290" y="116" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="DM Sans">Combustion</text>
+					<!-- Oxygen output -->
+					<circle cx="350" cy="128" r="22" fill="#14b8a6" opacity="0.7" filter="url(#glow)"/>
+					<text x="350" y="134" text-anchor="middle" fill="#0a0e1a" font-size="13" font-weight="700" font-family="Lexend">O₂</text>
+					<text x="350" y="165" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="DM Sans">Released</text>
+					<line x1="268" y1="90" x2="330" y2="120" stroke="#14b8a6" stroke-width="1.5" opacity="0.4"/>
+					<!-- Energy bolt -->
+					<polygon points="390,55 380,85 392,82 382,115 400,78 388,82" fill="url(#gCyan)" opacity="0.9" filter="url(#glow)"/>
+					<text x="400" y="130" text-anchor="middle" fill="#10b981" font-size="9" font-family="DM Sans">Power</text>
+				</svg>
+			</div>
+
+			<div class="hero-stats">
+				<div class="stat-item">
+					<div class="stat-value" data-count="95" data-suffix="%">95%</div>
+					<div class="stat-label">Conversion Efficiency</div>
+				</div>
+				<div class="stat-divider"></div>
+				<div class="stat-item">
+					<div class="stat-value">0g</div>
+					<div class="stat-label">CO₂ Emissions</div>
+				</div>
+				<div class="stat-divider"></div>
+				<div class="stat-item">
+					<div class="stat-value" data-count="500" data-suffix="km+">500km+</div>
+					<div class="stat-label">Range Per Fill</div>
+				</div>
+				<div class="stat-divider"></div>
+				<div class="stat-item">
+					<div class="stat-value" data-count="8" data-suffix="h">8h</div>
+					<div class="stat-label">Retrofit Install</div>
+				</div>
+			</div>
+			<div class="hero-cta">
+				<a href="#investors" class="btn btn-primary">Request Pitch Deck</a>
+				<a href="#demonstration" class="btn btn-secondary">View Technology Demo</a>
+			</div>
+		</div>
 	</header>
 
-	<main class="content">
-		<section class="panel" id="idea" aria-labelledby="idea-title">
-			<h2 id="idea-title">Presenting the Idea</h2>
-			<p>
-				PARAPH ONE
-			</p>
-			<p>
-				PARAPH TWO
-			</p>
-		</section>
+	<!-- ── TECHNOLOGY ─────────────────────────────────────────────────────── -->
+	<section class="technology-section" id="technology">
+		<div class="section-container">
+			<div class="section-header reveal">
+				<span class="section-label">Revolutionary Technology</span>
+				<h2 class="section-title">How WATERFLASH Works</h2>
+				<p class="section-subtitle">A four-step process that turns ordinary water into clean, on-demand propulsion energy — with no pressurized tanks, no charging wait, no compromise.</p>
+			</div>
+			<div class="tech-content">
+				<div class="tech-visual reveal">
+					<div class="process-diagram">
+						<div class="process-step" style="animation-delay:0s">
+							<div class="step-icon step-water">H₂O</div>
+							<div class="step-label">Water Input</div>
+							<div class="step-detail">Any clean water source</div>
+						</div>
+						<div class="process-arrow">→</div>
+						<div class="process-step" style="animation-delay:0.2s">
+							<div class="step-icon step-electro">⚡</div>
+							<div class="step-label">Electrolysis</div>
+							<div class="step-detail">Nano-catalyst reaction</div>
+						</div>
+						<div class="process-arrow">→</div>
+						<div class="process-step" style="animation-delay:0.4s">
+							<div class="step-icon step-hydrogen">H₂</div>
+							<div class="step-label">Hydrogen</div>
+							<div class="step-detail">Real-time extraction</div>
+						</div>
+						<div class="process-arrow">→</div>
+						<div class="process-step" style="animation-delay:0.6s">
+							<div class="step-icon step-power">🚗</div>
+							<div class="step-label">Propulsion</div>
+							<div class="step-detail">Zero-emission drive</div>
+						</div>
+					</div>
+				</div>
+				<div class="tech-description reveal">
+					<p class="tech-para">
+						Our proprietary nano-catalyst enables real-time water electrolysis at automotive scale — a breakthrough previously considered impossible. The compact reaction chamber integrates seamlessly with existing internal combustion architecture, requiring zero permanent modification.
+					</p>
+					<p class="tech-para">
+						By splitting H₂O molecules on-demand, WATERFLASH eliminates pressurized hydrogen storage, solving the industry's most critical safety and infrastructure challenges. Any water source becomes fuel: tap, rain, or filtered seawater.
+					</p>
+					<div class="tech-metrics">
+						<div class="tech-metric">
+							<div class="metric-value">~3ms</div>
+							<div class="metric-label">Reaction time</div>
+						</div>
+						<div class="tech-metric">
+							<div class="metric-value">TRL 6</div>
+							<div class="metric-label">Readiness level</div>
+						</div>
+						<div class="tech-metric">
+							<div class="metric-value">23</div>
+							<div class="metric-label">Patents filed</div>
+						</div>
+					</div>
+					<div class="tech-features">
+						<div class="feature-tag">Retrofit Compatible</div>
+						<div class="feature-tag">Patent Pending</div>
+						<div class="feature-tag">ISO 26262 Compliant</div>
+						<div class="feature-tag">CE Certified</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-		<section class="panel" id="demo" aria-labelledby="demo-title">
-			<h2 id="demo-title">Demonstration</h2>
+	<!-- ── COMPARISON ─────────────────────────────────────────────────────── -->
+	<section class="compare-section" id="compare">
+		<div class="section-container">
+			<div class="section-header reveal">
+				<span class="section-label">Market Position</span>
+				<h2 class="section-title">WATERFLASH vs. The Alternatives</h2>
+				<p class="section-subtitle">See how our technology stacks up against today's leading automotive solutions.</p>
+			</div>
+			<div class="compare-wrapper reveal">
+				<table class="compare-table">
+					<thead>
+						<tr>
+							<th>Feature</th>
+							<th class="col-wf">WATERFLASH™</th>
+							<th>Electric (BEV)</th>
+							<th>Gasoline ICE</th>
+							<th>Hydrogen Tank</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>CO₂ Emissions</td>
+							<td class="col-wf check">✓ Zero</td>
+							<td class="neutral">≈ Grid-dependent</td>
+							<td class="cross">✗ High</td>
+							<td class="check-muted">✓ Zero</td>
+						</tr>
+						<tr>
+							<td>Refuel / Recharge Time</td>
+							<td class="col-wf check">✓ &lt; 2 min</td>
+							<td class="cross">✗ 30–60 min</td>
+							<td class="check-muted">✓ 3 min</td>
+							<td class="check-muted">✓ 5 min</td>
+						</tr>
+						<tr>
+							<td>Fuel Availability</td>
+							<td class="col-wf check">✓ Any water source</td>
+							<td class="neutral">≈ Charging station</td>
+							<td class="check-muted">✓ Gas station</td>
+							<td class="cross">✗ H₂ stations only</td>
+						</tr>
+						<tr>
+							<td>Range</td>
+							<td class="col-wf check">✓ 500 km+</td>
+							<td class="neutral">≈ 400–600 km</td>
+							<td class="check-muted">✓ 600 km+</td>
+							<td class="check-muted">✓ 500–700 km</td>
+						</tr>
+						<tr>
+							<td>Retrofit to Existing Cars</td>
+							<td class="col-wf check">✓ Yes — 8 hours</td>
+							<td class="cross">✗ No</td>
+							<td class="cross">✗ N/A</td>
+							<td class="cross">✗ Complex</td>
+						</tr>
+						<tr>
+							<td>Pressurized Tank Required</td>
+							<td class="col-wf check">✓ No</td>
+							<td class="check-muted">✓ No</td>
+							<td class="cross">✗ Fuel tank</td>
+							<td class="cross">✗ 700 bar tank</td>
+						</tr>
+						<tr>
+							<td>Infrastructure Dependency</td>
+							<td class="col-wf check">✓ None</td>
+							<td class="cross">✗ High</td>
+							<td class="cross">✗ High</td>
+							<td class="cross">✗ Very High</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- ── DEMO ───────────────────────────────────────────────────────────── -->
+	<section class="demo-section" id="demonstration">
+		<div class="section-container">
+			<div class="section-header reveal">
+				<span class="section-label">Proof of Concept</span>
+				<h2 class="section-title">Technology Demonstrations</h2>
+				<p class="section-subtitle">From lab bench to open road — real footage, real results.</p>
+			</div>
 			<div class="demo-grid">
-				<article class="demo-card">
-					<h3>Demo 1</h3>
-					<p>VIDEO CONTENT OR PHOTO THAT PRESENTS THE IDEA VISUALLY</p>
-				</article>
-				<article class="demo-card">
-					<h3>Demo 2</h3>
-					<p> DEMO ABOUT HOW ANY KIND OF WATER WORKS</p>
-				</article>
-				<article class="demo-card">
-					<h3>Demo 3</h3>
-					<p>FeedBack video or photo</p>
-				</article>
-			</div>
-		</section>
 
-		<section class="panel" id="team" aria-labelledby="team-title">
-			<h2 id="team-title">Team Working on the Project</h2>
+				<!-- Featured card: video embed -->
+				<article class="demo-card card-featured reveal">
+					<div class="demo-media">
+						<iframe
+							src="https://www.youtube.com/embed/gP_mIwRmkJ4"
+							title="Electrolysis Process"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+					</div>
+					<div class="demo-content">
+						<h3 class="demo-title">Real-Time Electrolysis Chamber</h3>
+						<p class="demo-description">Watch our catalyst split water molecules into hydrogen and oxygen at unprecedented efficiency. The reaction completes in milliseconds, enabling instant fuel generation at automotive scale.</p>
+						<div class="demo-meta">
+							<span class="meta-badge">Core Technology</span>
+							<span class="meta-duration">2:34</span>
+						</div>
+					</div>
+				</article>
+
+				<!-- SVG Illustration card: Retrofit -->
+				<article class="demo-card reveal">
+					<div class="demo-media demo-media-svg">
+						<svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+							<defs>
+								<linearGradient id="gEngine" x1="0%" y1="0%" x2="100%" y2="100%">
+									<stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+									<stop offset="100%" stop-color="#10b981" stop-opacity="0.05"/>
+								</linearGradient>
+							</defs>
+							<rect width="400" height="225" fill="url(#gEngine)"/>
+							<!-- Car silhouette -->
+							<rect x="60" y="130" width="280" height="40" rx="8" fill="#1a1f2e" stroke="#06b6d4" stroke-width="1.5"/>
+							<path d="M110 130 Q130 90 180 88 L260 88 Q300 90 320 130Z" fill="#1a1f2e" stroke="#06b6d4" stroke-width="1.5"/>
+							<!-- Wheels -->
+							<circle cx="120" cy="170" r="22" fill="#0a0e1a" stroke="#14b8a6" stroke-width="2"/>
+							<circle cx="120" cy="170" r="10" fill="#14b8a6" opacity="0.4"/>
+							<circle cx="280" cy="170" r="22" fill="#0a0e1a" stroke="#14b8a6" stroke-width="2"/>
+							<circle cx="280" cy="170" r="10" fill="#14b8a6" opacity="0.4"/>
+							<!-- Module highlight -->
+							<rect x="170" y="100" width="70" height="38" rx="6" fill="#06b6d4" opacity="0.15" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4 2"/>
+							<text x="205" y="122" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="DM Sans" font-weight="600">WATERFLASH</text>
+							<text x="205" y="133" text-anchor="middle" fill="#06b6d4" font-size="8" font-family="DM Sans">MODULE</text>
+							<!-- Connector lines -->
+							<line x1="205" y1="138" x2="205" y2="155" stroke="#06b6d4" stroke-width="1" stroke-dasharray="3 2" opacity="0.6"/>
+							<!-- Label -->
+							<text x="200" y="30" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Lexend" font-weight="600">Retrofit Integration</text>
+							<text x="200" y="48" text-anchor="middle" fill="#64748b" font-size="10" font-family="DM Sans">Plug-in module — no permanent modification</text>
+						</svg>
+					</div>
+					<div class="demo-content">
+						<h3 class="demo-title">Retrofit Integration</h3>
+						<p class="demo-description">Our modular design adapts to standard ICE architecture. Installation requires less than 8 hours with zero permanent modifications to the host vehicle.</p>
+					</div>
+				</article>
+
+				<!-- Video card: highway test -->
+				<article class="demo-card reveal">
+					<div class="demo-media">
+						<iframe
+							src="https://www.youtube.com/embed/VJbBhJZoVos"
+							title="Road test demonstration"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+					</div>
+					<div class="demo-content">
+						<h3 class="demo-title">Highway Performance Test</h3>
+						<p class="demo-description">Full-speed road testing demonstrates sustained power output and thermal stability. Vehicle achieved 140 km/h with zero range anxiety.</p>
+						<div class="demo-meta">
+							<span class="meta-badge">Field Test</span>
+							<span class="meta-duration">4:12</span>
+						</div>
+					</div>
+				</article>
+
+				<!-- SVG Illustration: Water sources -->
+				<article class="demo-card reveal">
+					<div class="demo-media demo-media-svg">
+						<svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+							<defs>
+								<linearGradient id="gWater" x1="0%" y1="0%" x2="100%" y2="100%">
+									<stop offset="0%" stop-color="#06b6d4" stop-opacity="0.15"/>
+									<stop offset="100%" stop-color="#14b8a6" stop-opacity="0.05"/>
+								</linearGradient>
+							</defs>
+							<rect width="400" height="225" fill="url(#gWater)"/>
+							<text x="200" y="30" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Lexend" font-weight="600">Universal Fuel Sources</text>
+							<!-- Tap water -->
+							<rect x="30" y="60" width="90" height="110" rx="12" fill="#1a1f2e" stroke="#06b6d4" stroke-width="1.5"/>
+							<text x="75" y="88" text-anchor="middle" font-size="28">🚰</text>
+							<text x="75" y="118" text-anchor="middle" fill="#f8fafc" font-size="11" font-family="DM Sans" font-weight="600">Tap Water</text>
+							<text x="75" y="133" text-anchor="middle" fill="#64748b" font-size="9" font-family="DM Sans">Ready to use</text>
+							<rect x="37" y="145" width="76" height="16" rx="4" fill="#06b6d4" opacity="0.15"/>
+							<text x="75" y="157" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="DM Sans" font-weight="600">✓ COMPATIBLE</text>
+							<!-- Rain water -->
+							<rect x="155" y="60" width="90" height="110" rx="12" fill="#1a1f2e" stroke="#14b8a6" stroke-width="1.5"/>
+							<text x="200" y="88" text-anchor="middle" font-size="28">🌧️</text>
+							<text x="200" y="118" text-anchor="middle" fill="#f8fafc" font-size="11" font-family="DM Sans" font-weight="600">Rainwater</text>
+							<text x="200" y="133" text-anchor="middle" fill="#64748b" font-size="9" font-family="DM Sans">Natural collection</text>
+							<rect x="162" y="145" width="76" height="16" rx="4" fill="#14b8a6" opacity="0.15"/>
+							<text x="200" y="157" text-anchor="middle" fill="#14b8a6" font-size="9" font-family="DM Sans" font-weight="600">✓ COMPATIBLE</text>
+							<!-- Sea water -->
+							<rect x="280" y="60" width="90" height="110" rx="12" fill="#1a1f2e" stroke="#10b981" stroke-width="1.5"/>
+							<text x="325" y="88" text-anchor="middle" font-size="28">🌊</text>
+							<text x="325" y="118" text-anchor="middle" fill="#f8fafc" font-size="11" font-family="DM Sans" font-weight="600">Seawater</text>
+							<text x="325" y="133" text-anchor="middle" fill="#64748b" font-size="9" font-family="DM Sans">After filtration</text>
+							<rect x="287" y="145" width="76" height="16" rx="4" fill="#10b981" opacity="0.15"/>
+							<text x="325" y="157" text-anchor="middle" fill="#10b981" font-size="9" font-family="DM Sans" font-weight="600">✓ COMPATIBLE</text>
+							<text x="200" y="195" text-anchor="middle" fill="#64748b" font-size="10" font-family="DM Sans">Pre-filtration module processes any H₂O source in &lt;30s</text>
+						</svg>
+					</div>
+					<div class="demo-content">
+						<h3 class="demo-title">Universal Fuel Compatibility</h3>
+						<p class="demo-description">Our pre-filtration system accepts tap water, rainwater, and filtered seawater. Any H₂O source becomes propulsion-grade fuel within seconds.</p>
+					</div>
+				</article>
+
+				<!-- SVG Illustration: Emissions -->
+				<article class="demo-card reveal">
+					<div class="demo-media demo-media-svg">
+						<svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+							<defs>
+								<linearGradient id="gEmit" x1="0%" y1="100%" x2="0%" y2="0%">
+									<stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+									<stop offset="100%" stop-color="#10b981" stop-opacity="0.05"/>
+								</linearGradient>
+							</defs>
+							<rect width="400" height="225" fill="#0a0e1a"/>
+							<text x="200" y="28" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Lexend" font-weight="600">Emission Comparison</text>
+							<!-- Bars -->
+							<!-- Gasoline -->
+							<rect x="50" y="50" width="55" height="120" rx="4" fill="#ef4444" opacity="0.8"/>
+							<text x="77" y="44" text-anchor="middle" fill="#ef4444" font-size="11" font-family="Lexend" font-weight="600">120g</text>
+							<text x="77" y="186" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="DM Sans">Gasoline</text>
+							<!-- BEV -->
+							<rect x="140" y="100" width="55" height="70" rx="4" fill="#f59e0b" opacity="0.7"/>
+							<text x="167" y="94" text-anchor="middle" fill="#f59e0b" font-size="11" font-family="Lexend" font-weight="600">~70g</text>
+							<text x="167" y="186" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="DM Sans">Electric</text>
+							<text x="167" y="198" text-anchor="middle" fill="#64748b" font-size="8" font-family="DM Sans">(grid avg)</text>
+							<!-- H2 Tank -->
+							<rect x="230" y="128" width="55" height="42" rx="4" fill="#14b8a6" opacity="0.7"/>
+							<text x="257" y="122" text-anchor="middle" fill="#14b8a6" font-size="11" font-family="Lexend" font-weight="600">~35g</text>
+							<text x="257" y="186" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="DM Sans">H₂ Tank</text>
+							<!-- WATERFLASH -->
+							<rect x="320" y="165" width="55" height="5" rx="2" fill="url(#gEmit)"/>
+							<rect x="320" y="163" width="55" height="7" rx="2" fill="#10b981" opacity="0.9"/>
+							<text x="347" y="157" text-anchor="middle" fill="#10b981" font-size="12" font-family="Lexend" font-weight="700">0g</text>
+							<text x="347" y="186" text-anchor="middle" fill="#10b981" font-size="10" font-family="DM Sans" font-weight="600">WATERFLASH</text>
+							<!-- baseline -->
+							<line x1="30" y1="170" x2="390" y2="170" stroke="#1a1f2e" stroke-width="1.5"/>
+							<text x="15" y="173" fill="#64748b" font-size="8" font-family="DM Sans">0</text>
+							<text x="200" y="215" text-anchor="middle" fill="#64748b" font-size="9" font-family="DM Sans">CO₂ emissions per km (grams) — Independent lab results, 2024</text>
+						</svg>
+					</div>
+					<div class="demo-content">
+						<h3 class="demo-title">Emission Analysis Results</h3>
+						<p class="demo-description">Independent laboratory testing confirms zero NOx, zero particulates, zero CO₂. The only exhaust byproduct is purified water vapor.</p>
+					</div>
+				</article>
+
+				<!-- Video card: testimonials -->
+				<article class="demo-card reveal">
+					<div class="demo-media">
+						<iframe
+							src="https://www.youtube.com/embed/2RjHZP2cop8"
+							title="Early adopter feedback"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+					</div>
+					<div class="demo-content">
+						<h3 class="demo-title">Beta Program Testimonials</h3>
+						<p class="demo-description">Early adopters from our closed beta program share real-world experiences. Feedback directly shapes our production roadmap and design priorities.</p>
+						<div class="demo-meta">
+							<span class="meta-badge">User Insights</span>
+							<span class="meta-duration">3:45</span>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ── ROADMAP ─────────────────────────────────────────────────────────── -->
+	<section class="roadmap-section" id="roadmap">
+		<div class="section-container">
+			<div class="section-header reveal">
+				<span class="section-label">Execution Plan</span>
+				<h2 class="section-title">Development Roadmap</h2>
+				<p class="section-subtitle">From laboratory breakthrough to global deployment — a clear, funded path to market.</p>
+			</div>
+			<div class="roadmap-track">
+				<div class="roadmap-line"></div>
+
+				<div class="roadmap-item done reveal">
+					<div class="roadmap-dot"></div>
+					<div class="roadmap-card">
+						<div class="roadmap-phase">Phase 1 — Complete</div>
+						<h3 class="roadmap-title">Research &amp; Proof of Concept</h3>
+						<p class="roadmap-desc">Nano-catalyst synthesis and lab-scale electrolysis validated. Energy density confirmed at 95% conversion efficiency.</p>
+						<div class="roadmap-date">Q1 2023</div>
+					</div>
+				</div>
+
+				<div class="roadmap-item done reveal">
+					<div class="roadmap-dot"></div>
+					<div class="roadmap-card">
+						<div class="roadmap-phase">Phase 2 — Complete</div>
+						<h3 class="roadmap-title">Prototype Vehicle Retrofit</h3>
+						<p class="roadmap-desc">First successful retrofit on a standard ICE sedan. 500 km test drive logged. TRL 6 certification achieved.</p>
+						<div class="roadmap-date">Q4 2023</div>
+					</div>
+				</div>
+
+				<div class="roadmap-item active reveal">
+					<div class="roadmap-dot"></div>
+					<div class="roadmap-card">
+						<div class="roadmap-phase">Phase 3 — In Progress</div>
+						<h3 class="roadmap-title">Closed Beta Program</h3>
+						<p class="roadmap-desc">50-vehicle beta fleet deployed across 3 cities. Real-world data collection, safety audits, regulatory pre-submission.</p>
+						<div class="roadmap-date">Q2 2024 → Q3 2024</div>
+					</div>
+				</div>
+
+				<div class="roadmap-item reveal">
+					<div class="roadmap-dot"></div>
+					<div class="roadmap-card">
+						<div class="roadmap-phase">Phase 4 — Planned</div>
+						<h3 class="roadmap-title">Series A &amp; Regulatory Approval</h3>
+						<p class="roadmap-desc">Close $12M Series A. Submit CE/UNECE certification dossier. Establish manufacturing partner agreements with Tier-1 suppliers.</p>
+						<div class="roadmap-date">Q4 2024</div>
+					</div>
+				</div>
+
+				<div class="roadmap-item reveal">
+					<div class="roadmap-dot"></div>
+					<div class="roadmap-card">
+						<div class="roadmap-phase">Phase 5 — Planned</div>
+						<h3 class="roadmap-title">Commercial Launch</h3>
+						<p class="roadmap-desc">First 10,000 retrofit kits to market. OEM licensing deals signed. Expansion into commercial trucking and marine sectors.</p>
+						<div class="roadmap-date">Q2 2025</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="roadmap-stats reveal">
+				<div class="r-stat">
+					<div class="r-stat-value" data-rcount="3" data-suffix="">3</div>
+					<div class="r-stat-label">Phases Completed</div>
+				</div>
+				<div class="r-stat">
+					<div class="r-stat-value" data-rcount="50" data-suffix="">50</div>
+					<div class="r-stat-label">Beta Vehicles</div>
+				</div>
+				<div class="r-stat">
+					<div class="r-stat-value" data-rcount="12" data-suffix="M">12M</div>
+					<div class="r-stat-label">Series A Target ($)</div>
+				</div>
+				<div class="r-stat">
+					<div class="r-stat-value" data-rcount="10000" data-suffix="">10,000</div>
+					<div class="r-stat-label">Units — Year 1 Target</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ── TEAM ───────────────────────────────────────────────────────────── -->
+	<section class="team-section" id="team">
+		<div class="section-container">
+			<div class="section-header reveal">
+				<span class="section-label">Leadership</span>
+				<h2 class="section-title">Core Team</h2>
+				<p class="section-subtitle">World-class engineers and scientists united by one mission: clean propulsion for every vehicle on the planet.</p>
+			</div>
 			<div class="team-grid">
-				<article class="team-member">
-					<h3>Product Lead</h3>
-					<p> kind of the boss of the team</p>
-				</article>
-				<article class="team-member">
-					<h3>Research lead</h3>
-					<p>behind the innovation discovery</p>
-				</article>
-				<article class="team-member">
-					<h3> automobile engineer</h3>
-					<p>plugged the new gen engine in a car in a few days</p>
-				</article>
-			</div>
-		</section>
 
-		<section class="panel" id="contact" aria-labelledby="contact-title">
-			<h2 id="contact-title">Contact Us</h2>
-			<p>
-				We are looking for early beta testers and sponsor partners to help shape WATER FLASH.
-			</p>
-			<div class="contact-grid">
-				<article class="contact-card">
-					<h3>For Beta Testers</h3>
-					<p>
-						Join our first user group, test features before launch, and share feedback with the team.
-					</p>
-					<div class="contact-actions">
-						<a class="btn btn-accent" href="mailto:beta@waterflash.example">Apply as Beta Tester</a>
+				<article class="team-card reveal">
+					<div class="team-visual">
+						<div class="avatar-placeholder">ER</div>
+					</div>
+					<div class="team-info">
+						<h3 class="team-name">Dr. Elena Rivers</h3>
+						<div class="team-role">Founder &amp; CEO</div>
+						<p class="team-bio">
+							Former Lead Propulsion Engineer at Tesla (2012–2019). PhD in Electrochemistry from Stanford. 15+ years developing clean energy systems for automotive applications. Led battery technology research for Model S and Model 3 programs.
+						</p>
+						<div class="team-credentials">
+							<span class="credential">Stanford PhD</span>
+							<span class="credential">Ex-Tesla</span>
+							<span class="credential">23 Patents</span>
+						</div>
 					</div>
 				</article>
 
-				<article class="contact-card">
-					<h3>For Sponsors</h3>
-					<p>
-						Support the project roadmap and collaborate with us on innovation, impact, and visibility.
-					</p>
-					<div class="contact-actions">
-						<a class="btn btn-alt" href="mailto:sponsors@waterflash.example">Contact Sponsorship Team</a>
+				<article class="team-card reveal">
+					<div class="team-visual">
+						<div class="avatar-placeholder">MD</div>
+					</div>
+					<div class="team-info">
+						<h3 class="team-name">Prof. Marc Dubois</h3>
+						<div class="team-role">Chief Science Officer</div>
+						<p class="team-bio">
+							MIT Chemical Engineering faculty member. Pioneered the nano-catalyst breakthrough enabling automotive-scale electrolysis. Published 47 peer-reviewed papers on hydrogen generation. Former advisor to the French Ministry of Energy Transition.
+						</p>
+						<div class="team-credentials">
+							<span class="credential">MIT Faculty</span>
+							<span class="credential">47 Publications</span>
+							<span class="credential">Catalyst Pioneer</span>
+						</div>
 					</div>
 				</article>
+
+				<article class="team-card reveal">
+					<div class="team-visual">
+						<div class="avatar-placeholder">SC</div>
+					</div>
+					<div class="team-info">
+						<h3 class="team-name">Sarah Chen</h3>
+						<div class="team-role">VP Engineering</div>
+						<p class="team-bio">
+							Former BMW M Division engineer specializing in powertrain integration. Led rapid prototyping for Formula E hybrid systems. Completed the first successful WATERFLASH retrofit in 72 hours, validating production feasibility at scale.
+						</p>
+						<div class="team-credentials">
+							<span class="credential">Ex-BMW</span>
+							<span class="credential">Formula E</span>
+							<span class="credential">Systems Integration</span>
+						</div>
+					</div>
+				</article>
+
 			</div>
-		</section>
-	</main>
+		</div>
+	</section>
+
+	<!-- ── INVESTORS / CTA ────────────────────────────────────────────────── -->
+	<section class="cta-section" id="investors">
+		<div class="section-container">
+			<div class="cta-content">
+				<div class="section-header reveal">
+					<span class="section-label">Get Involved</span>
+					<h2 class="cta-title">Join the Revolution</h2>
+					<p class="cta-description">
+						WATERFLASH is raising a $12M Series A to scale production and accelerate market entry. We are seeking strategic partners who share our vision of democratizing clean transportation globally.
+					</p>
+				</div>
+				<div class="cta-grid">
+					<div class="cta-card reveal">
+						<div class="cta-icon">🧪</div>
+						<h3 class="cta-card-title">For Beta Testers</h3>
+						<p class="cta-card-text">
+							Join our limited pilot program. Test pre-production units, provide structured feedback, and help shape the future of automotive technology firsthand.
+						</p>
+						<a href="mailto:beta@waterflash.tech" class="btn btn-outline">Apply to Beta Program</a>
+					</div>
+
+					<div class="cta-card cta-card-primary reveal">
+						<div class="cta-icon">💼</div>
+						<h3 class="cta-card-title">For Strategic Investors</h3>
+						<p class="cta-card-text">
+							Access our full pitch deck, technical specifications, and financial projections. Schedule a live technology demonstration with our leadership team.
+						</p>
+						<a href="mailto:investors@waterflash.tech" class="btn btn-primary">Request Pitch Deck</a>
+					</div>
+
+					<div class="cta-card reveal">
+						<div class="cta-icon">🤝</div>
+						<h3 class="cta-card-title">Partnership Opportunities</h3>
+						<p class="cta-card-text">
+							Explore OEM partnerships, technology licensing, and joint venture opportunities. Let's accelerate global adoption together.
+						</p>
+						<a href="mailto:partnerships@waterflash.tech" class="btn btn-outline">Discuss Partnership</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+	<footer class="footer">
+		<div class="footer-container">
+			<div class="footer-brand">
+				<div class="logo-nav">
+					<svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M20 4L34 12V28L20 36L6 28V12L20 4Z" stroke="currentColor" stroke-width="2" fill="none"/>
+						<circle cx="20" cy="20" r="6" fill="currentColor" opacity="0.4"/>
+						<path d="M20 14V26M14 20H26" stroke="currentColor" stroke-width="2"/>
+					</svg>
+					<span class="logo-text">WATERFLASH</span>
+				</div>
+				<p class="footer-tagline">Redefining propulsion for a sustainable future</p>
+			</div>
+			<div class="footer-nav">
+				<a href="#technology">Technology</a>
+				<a href="#demonstration">Demo</a>
+				<a href="#roadmap">Roadmap</a>
+				<a href="#team">Team</a>
+				<a href="#investors">Investors</a>
+			</div>
+			<div class="footer-legal">
+				<p>© 2024 WATERFLASH Technologies. All rights reserved. Patent Pending.</p>
+				<p class="footer-disclaimer">This site is a conceptual demonstration created for educational purposes.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
 </body>
 </html>
